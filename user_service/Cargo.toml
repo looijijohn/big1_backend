@@ -22,4 +22,5 @@ schemars = { package = "apistos-schemars", version = "0.8" }
 apistos = "0.4"
 
 
- 
+utoipa = "5.2.0"
+utoipa-swagger-ui = "8.0.3"     # Swagger UI for easy viewing

@@ -5,12 +5,12 @@ mod handlers;
 mod services;
 
 use actix_web::{App, HttpServer, web};
-use mongodb::Client;
-use dotenv::dotenv;
-use std::env;
 use crate::db::connect;
 use crate::routes::config;
     
+ 
+
+
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
@@ -20,12 +20,12 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .app_data(web::Data::new(client.clone()))
             .configure(config)
-
+         
     })
     
 
 
-    .bind("127.0.0.1:8080")?
+    .bind("127.0.0.1:9090")?
     .run()
     .await
 }
